@@ -82,13 +82,63 @@ class Main
          *         ar1: 1 2 3
          *         ar3: 1 2 3 0 1 2 3
          */
+        System.out.println("** Create ar3 **");
+        int[] ar3 = new int[2*ar1.length];
         
+        for (int i=0; i<ar1.length; i++)
+        {
+            ar3[i] = ar1[i];
+        }
+        
+        for (int i=0; i<ar1.length; i++)
+        {
+             ar3[i+ar1.length] = ar1[i];
+        }
+        
+        for (int i=0; i<ar3.length; i++)
+        {
+            System.out.println("ar3["+i+"] = "+ar3[i]);
+        }
+        
+        //
+        
+        int k=0;
+        for (int numbers=0; numbers<2; numbers++)
+        { 
+            for (int i=0; i<ar1.length; i++)
+            {
+                ar3[k]=ar1[i];
+                k++;    
+            }
+        }
+    
         
         /*
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
          */
         
+        System.out.println("Switch First and Last of ar1");
+        int value = ar1[0];
+        ar1[0] = ar1[n-1];
+        ar1[n-1] = value;
+        
+        for (int i=0; i<ar1.length; i++)
+        {
+            System.out.println("ar1["+i+"] = "+ar1[i]);
+        }
+        
+        value = ar1[0];
+        ar1[0] = ar1[n-1];
+        ar1[n-1] = value;
+        
+        System.out.println("Switch back ar1");
+        for (int i=0; i<ar1.length; i++)
+        {
+            System.out.println("ar1["+i+"] = "+ar1[i]);
+        }
+       
+          
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
          * Task 6B: Print out just the odd numbers in ar1
