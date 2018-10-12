@@ -29,7 +29,7 @@ class Main
          * Task 1.  Create an array of integers from 0 to n-1
          *          call this array ar1.  Print it out below.
          */
-        System.out.println("*** PRINTING ar1 *");
+        System.out.println("** Task 1 **");
         int[] ar1 = new int[n];
         
         for (int i=0; i<n; i++)
@@ -49,7 +49,7 @@ class Main
         // This clones ar1[] into ar2[]
         // int[] ar2 = ar1.clone();
         
-        System.out.println("** ar2 **");
+        System.out.println("** Task 2 **");
         int[] ar2 = new int[ar1.length];
         for (int i=0; i<ar2.length; i++)
         {
@@ -65,7 +65,7 @@ class Main
         /* 
          * Task 3. Add 1 to each element in ar1.  Print it out below
          */
-        System.out.println("** Add 1 to ar1 **");
+        System.out.println("** Task 3 **");
         for (int i=0; i<n; i++)
         {
             ar1[i] = ar1[i]+1;
@@ -82,7 +82,7 @@ class Main
          *         ar1: 1 2 3
          *         ar3: 1 2 3 0 1 2 3
          */
-        System.out.println("** Create ar3 **");
+        System.out.println("** Task 4 **");
         int[] ar3 = new int[2*ar1.length];
         
         for (int i=0; i<ar1.length; i++)
@@ -118,11 +118,12 @@ class Main
          *          print out the new ar1.  Then switch them back
          */
         
-        System.out.println("Switch First and Last of ar1");
-        int value = ar1[0];
+        System.out.println("** Task 5 **");
+        int value = ar1[0]; 
         ar1[0] = ar1[n-1];
         ar1[n-1] = value;
         
+       
         for (int i=0; i<ar1.length; i++)
         {
             System.out.println("ar1["+i+"] = "+ar1[i]);
@@ -141,11 +142,37 @@ class Main
           
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
+         */
+        System.out.println("** Task 6A **");
+        for (int i=1; i<ar1.length-1; i++)
+        {
+            System.out.println(ar1[i]);
+        }
+       
+        /*
          * Task 6B: Print out just the odd numbers in ar1
-         * Task 6C: Print out the elements of ar1 when
+        */
+        System.out.println("** Task 6B **");
+        for (int i=0; i<ar1.length; i++)
+        {
+            if (ar1[i]%2 == 1)
+            {
+                System.out.println(ar1[i]);
+            }
+        }
+       
+         /* Task 6C: Print out the elements of ar1 when
          *          the indices are multiples of 3
          *         
          */
+        System.out.println("** Task 6C **");
+        for (int i=0; i<ar1.length; i++)
+        {
+            if (i%3 == 0)
+            {
+                System.out.println(ar1[i]);
+            }
+        }
         
         /*
          * Task 7.  For each element in ar1, 
