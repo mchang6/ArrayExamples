@@ -232,6 +232,9 @@ class Main
          * numbers from ar1 into ar4.  Print ar4
          */
         
+        System.out.println("** Task 9 **");
+        
+        
         /*
          * Task 10.  Shift the elements of ar4 right by 1
          * For example
