@@ -329,6 +329,44 @@ class Main
          *  
          *  Count how many words have more than 5 letters.
          */
+        System.out.println("** Task 12 **");
+        
+        String[] ar5 = new String[16];
+        ar5[0]="Four";
+        ar5[1]="score";
+        ar5[2]="and";
+        ar5[3]="seven";
+        ar5[4]="years";
+        ar5[5]="ago";
+        ar5[6]="our";
+        ar5[7]="fathers";
+        ar5[8]="brought";
+        ar5[9]="forth";
+        ar5[10]="on";
+        ar5[11]="this";
+        ar5[12]="continent";
+        ar5[13]="a";
+        ar5[14]="new";
+        ar5[15]="nation";
+        
+        int[] ar6 = new int[16];
+        int task12count = 0;
+        
+        for (int i=0; i<ar6.length; i++)
+        {
+            ar6[i] = (ar5[i]).length();
+        }
+        
+        for (int i=0; i<ar6.length; i++)
+        {
+            if (ar6[i]>5)
+            {
+                task12count+=1;
+            }
+        }
+        
+        System.out.println("There are "+task12count+" words with more than 5 letters");
+        
         
         /*
          * Task 13
@@ -345,6 +383,48 @@ class Main
          * a vowel
          */
         
+        System.out.println("** Task 13 **");
+        String[] monsterArray = new String[5];
+        
+        monsterArray[0] = "Cookie";
+        monsterArray[1] = "Grover";
+        monsterArray[2] = "Oscar the Grouch";
+        monsterArray[3] = "Elmo";
+        monsterArray[4] = "Rosita";
+        
+        for (int i=0; i<monsterArray.length; i++)
+        {
+            System.out.println(monsterArray[i]);
+        }
+        
+        System.out.println("\nStarts with a vowel:");
+        for (int i=0; i<monsterArray.length; i++)
+        {
+            if (monsterArray[i].substring(0,1).equals("A"))
+            {
+                System.out.println(monsterArray[i]);
+            }
+            
+            if (monsterArray[i].substring(0,1).equals("E"))
+            {
+                System.out.println(monsterArray[i]);
+            }
+            
+            if (monsterArray[i].substring(0,1).equals("I"))
+            {
+                System.out.println(monsterArray[i]);
+            }
+            
+            if (monsterArray[i].substring(0,1).equals("O"))
+            {
+                System.out.println(monsterArray[i]);
+            }
+            
+            if (monsterArray[i].substring(0,1).equals("U"))
+            {
+                System.out.println(monsterArray[i]);
+            }
+        }
          /*
           * Task 14
           * Create an array of integers from 3 to 94 and call it arx
@@ -361,7 +441,33 @@ class Main
           *         arindex[1]=5
           */
          
-         /*
+         System.out.println("** Task 14 **");
+         int[] arx = new int[94-3+1];
+         int[] arindex = new int[94-3+1];
+         int task14count = 0;
+         
+         for (int i=0; i<arx.length; i++)
+         {
+             arx[i] = 2+i;
+         }
+            
+         for (int i=0; i<arx.length; i++)
+         {
+             if (arx[i]%3==0)
+             {
+                 arindex[task14count] = i;
+                 task14count++;
+             }
+         }
+         
+         for (int i=0; i<arindex.length; i++)
+         {
+             System.out.println("arindex["+i+"] = "+arindex[i]);
+         }
+             
+
+                
+          /*
           * Create an arrary called "fb" and calculate the
           * first 10 fibonacci sequence.  You start with
           * fb[0]=1
@@ -370,6 +476,25 @@ class Main
           * fb[3]=fb[1]+fb[2]
           * fb[4]=fb[2]+fb[3]
           */
+         
+         System.out.println("** Fibonacci Sequence **");
+         int[] fb = new int[10];
+         fb[0] = 1;
+         fb[1] = 1;
+         
+         for (int i=2; i<fb.length; i++)
+         {
+             fb[i] = fb[i-2] + fb[i-1];
+         }
+         
+         for (int i=0; i<fb.length; i++)
+         {
+             System.out.println("fb["+i+"] = "+fb[i]);
+         }
+            
+         
+         
+         
         
     }
 }
