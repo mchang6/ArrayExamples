@@ -405,6 +405,12 @@ class Main
             System.out.println(monsterArray[i]); 
         }
         
+        System.out.println("\nEnhanced For");
+        for (String i : monsterArray)
+        {
+            System.out.println(i+": "+i.length());
+        }
+        
          /*
           * Task 14
           * Create an array of integers from 3 to 94 and call it arx
